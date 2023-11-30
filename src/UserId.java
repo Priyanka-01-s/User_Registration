@@ -28,4 +28,16 @@ public class UserId {
 
         return matcher.matches();
     }
+
+    public static boolean EmailId(String email){
+
+        //expression for valid email
+        String regex = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9]+\\.[a-zA-Z]{2,}$";
+
+        Pattern pattern = Pattern.compile(regex);
+        
+        Matcher matcher = pattern. matcher(email);
+
+        return matcher.matches();
+    }
 }
