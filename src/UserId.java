@@ -15,4 +15,17 @@ public class UserId {
 
         return matcher.matches();
     }
+
+    public static boolean lastName(String firstName){
+
+        //name will take min 3 character and will have first letter caps
+        String regex = "^[A-Z][a-zA-Z]{2,}$";
+
+        //compile the regular expression
+        Pattern pattern = Pattern.compile(regex);
+
+        Matcher matcher = pattern.matcher(firstName);
+
+        return matcher.matches();
+    }
 }
