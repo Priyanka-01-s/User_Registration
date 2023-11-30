@@ -18,42 +18,73 @@ public class Main {
         System.out.println("Enter the Phone number:");
         String phoneNo = sc.nextLine();
 
-        System.out.println("Enter the Password(Ensures it has atleast 1 capital letter, 1 numeric value, 1 special character and minimum length must be 8):");
+        System.out.println(
+                "Enter the Password(Ensures it has atleast 1 capital letter, 1 numeric value, 1 special character and minimum length must be 8):");
         String password = sc.nextLine();
 
-
-        if(UserId.firstName(fName) && UserId.lastName(lName)){
+        if (UserId.firstName(fName) && UserId.lastName(lName)) {
             System.out.println("Valid first and last name!");
 
-        }
-        else{
+        } else {
             System.out.println("Invalid first name. Please enter in a valid format!!");
         }
 
-        if(UserId.EmailId(emailId)){
+        if (UserId.EmailId(emailId)) {
             System.out.println("Valid Email-Id!");
 
-        }
-        else{
+        } else {
             System.out.println("Invalid Email-id. Please enter in a valid format!!");
         }
 
-         if(UserId.phoneNo(phoneNo)){
+        if (UserId.phoneNo(phoneNo)) {
             System.out.println("Valid Phhone number!");
 
-        }
-        else{
+        } else {
             System.out.println("Invalid Phone number. Please enter in a valid format!!");
         }
 
-        if(UserId.password(password)){
+        if (UserId.password(password)) {
             System.out.println("Valid Password!");
 
-        }
-        else{
+        } else {
             System.out.println("Invalid password. Please enter in a valid format!!");
         }
         sc.close();
+
+        String[] emails = {
+                "abc@yahoo.com",
+                "abc-100@yahoo.com",
+                "abc.100@yahoo.com",
+                "abc111@abc.com",
+                "abc-100@abc.net",
+                "abc.100@abc.com.au",
+                "abc@1.com",
+                "abc+100@gmail.com",
+                "abc",
+                "abc@.com.my",
+                "abc123@gmail.a",
+                "abc123@.com",
+                "abc123@.com.com",
+                ".abc@abc.com",
+                "abc()*@gmail.com",
+                "abc@%*.com",
+                "abc..2002@gmail.com",
+                "abc.@gmail.com",
+                "abc@abc@gmail.com",
+                "abc@gmail.com.1a",
+                "abc@gmail.com.aa.au"
+        };
+
+        for (String e : emails) {
+            System.out.println(e);
+            if (UserId.EmailId(e)) {
+                System.out.println("Valid Email-Id!");
+
+            } else {
+                System.out.println("Invalid Email-id. Please enter in a valid format!!");
+            }
+
+        }
     }
-    
+
 }
