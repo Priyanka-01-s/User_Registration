@@ -50,4 +50,22 @@ public class UserId {
         return matcher.matches();
 
     }
+
+    public static boolean password(String password){
+
+        //checks for a capital letter + checks of a numeric value + for a special character + min 8 character long
+        //^(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=!]).{8,}$"
+
+       // ^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$
+       //^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$
+       //(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()-_+=])[A-Za-z\\d]*[!@#$%^&*()-_+=][A-Za-z\\d!@#$%^&*()-_+=]{7,}
+        String regex = "(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*()-_+=])[A-Za-z\\d]*[!@#$%^&*()-_+=][A-Za-z\\d!@#$%^&*()-_+=]{8,}";
+
+        Pattern pattern = Pattern.compile(regex);
+        
+        Matcher matcher = pattern. matcher(password);
+
+        return matcher.matches();
+
+    }
 }

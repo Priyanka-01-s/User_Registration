@@ -12,18 +12,22 @@ public class Main {
         System.out.println("Enter the last name First letter as Capital and minimum 3 characters:");
         String lName = sc.nextLine();
 
-        System.out.println("Enter the Email-id");
+        System.out.println("Enter the Email-id:");
         String emailId = sc.nextLine();
 
-        System.out.println("Enter the Phone number");
+        System.out.println("Enter the Phone number:");
         String phoneNo = sc.nextLine();
+
+        System.out.println("Enter the Password(Ensures it has atleast 1 capital letter, 1 numeric value, 1 special character and minimum length must be 8):");
+        String password = sc.nextLine();
+
 
         if(UserId.firstName(fName) && UserId.lastName(lName)){
             System.out.println("Valid first and last name!");
 
         }
         else{
-            System.out.println("Invalid first name. Please enter in a valid formall!!");
+            System.out.println("Invalid first name. Please enter in a valid format!!");
         }
 
         if(UserId.EmailId(emailId)){
@@ -31,7 +35,7 @@ public class Main {
 
         }
         else{
-            System.out.println("Invalid Email-id. Please enter in a valid formall!!");
+            System.out.println("Invalid Email-id. Please enter in a valid format!!");
         }
 
          if(UserId.phoneNo(phoneNo)){
@@ -39,7 +43,15 @@ public class Main {
 
         }
         else{
-            System.out.println("Invalid Phone number. Please enter in a valid formall!!");
+            System.out.println("Invalid Phone number. Please enter in a valid format!!");
+        }
+
+        if(UserId.password(password)){
+            System.out.println("Valid Password!");
+
+        }
+        else{
+            System.out.println("Invalid password. Please enter in a valid format!!");
         }
         sc.close();
     }
