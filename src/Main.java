@@ -15,6 +15,9 @@ public class Main {
         System.out.println("Enter the Email-id");
         String emailId = sc.nextLine();
 
+        System.out.println("Enter the Phone number");
+        String phoneNo = sc.nextLine();
+
         if(UserId.firstName(fName) && UserId.lastName(lName)){
             System.out.println("Valid first and last name!");
 
@@ -29,6 +32,14 @@ public class Main {
         }
         else{
             System.out.println("Invalid Email-id. Please enter in a valid formall!!");
+        }
+
+         if(UserId.phoneNo(phoneNo)){
+            System.out.println("Valid Phhone number!");
+
+        }
+        else{
+            System.out.println("Invalid Phone number. Please enter in a valid formall!!");
         }
         sc.close();
     }

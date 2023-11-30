@@ -40,4 +40,14 @@ public class UserId {
 
         return matcher.matches();
     }
+
+    public static boolean phoneNo(String phone){
+        String regex = "^\\+?[1-9][0-9]{7,14}$";
+        Pattern pattern = Pattern.compile(regex);
+        
+        Matcher matcher = pattern. matcher(phone);
+
+        return matcher.matches();
+
+    }
 }
